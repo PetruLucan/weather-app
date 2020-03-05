@@ -98,7 +98,10 @@ function init(resultFromServer) {
     let temperature = document.getElementById('temperature');
     let humidity = document.getElementById('humidity');
 
-    currentConditionIcon.src = 'http://openweathermap.org/img/w/' + resultFromServer.weather[0].icon + '.png';
+    let newIcon = document.createElement('img')
+    currentConditionIcon.appendChild(newIcon);
+
+    newIcon.src = 'http://openweathermap.org/img/w/' + resultFromServer.weather[0].icon + '.png';
     let resultDescription = resultFromServer.weather[0].description;
     currentConditionDescription.innerText = resultDescription.charAt(0).toUpperCase() + resultDescription.slice(1);
     temperature.innerHTML = Math.floor(resultFromServer.main.temp) + '&#176';

@@ -64,3 +64,40 @@ div.container button {
     border-radius: 5px;
     padding: 5px;
 }
+
+@media screen and (max-width: 420px){
+    body{
+        font-size: small;
+        text-align: center;
+    }
+    .container{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .container h4{
+        position: fixed;
+        width: max-content;
+        top:4%;
+        margin:5% auto;
+        right: 0;
+        left:0;
+    }
+    .container div.generalPositions{
+        top: unset;
+        margin-top: 10%;
+    }
+    div.container button{
+        width: 30%;
+        bottom: 25%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    .responseMessage{
+        position: fixed;
+        margin: 5% auto;
+        top:7%;
+        right: 0;
+        left: 0;
+    }
+}
