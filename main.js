@@ -51,7 +51,7 @@ document.getElementById('next-step').addEventListener('click', () => {
 //API calls
 function searchWeather(searchTerm) {
     getSearchMethod(searchTerm);
-    fetch(`http://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&APPID=${appId}&units=${units}`).then(result => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&APPID=${appId}&units=${units}`).then(result => {
         return result.json();
     }).then(result => {
         init(result);
@@ -122,7 +122,7 @@ document.getElementById('coordsResultBtn').addEventListener('click', () => {
 })
 //API call with coodinates 
 function searchByCoords(latInput, longInput) {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${longInput}&lon=${latInput}&appid=${appId}`).then(response => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${longInput}&lon=${latInput}&appid=${appId}`).then(response => {
         return response.json();
     }).then(response => {
         init(response);
