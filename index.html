@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Welcome to Our web Weather App</h2>
+
+    <div id="choose-value" class="container">
+        <h4>Choose how u want to retrieve your data</h4>
+        <div class="generalPositions">
+            <p>Choose one option</p>
+            <!-- <input type="text" id="txtValue" placeholder="Select your option" required> -->
+            <select class="searchControls" id="dropList" onchange="dropDwnList()">
+                <option value="" disabled selected hidden>Please select your option</option>
+                <option value="city">City name</option>
+                <option value="id">By id</option>
+                <option value="coord">By geographic coordiantes</option>
+                <option value="ZIP">by ZIP code</option>
+            </select>
+        </div>
+        <div class="generalPositions">
+            <p>Choose a date</p>
+            <input id="dateInput" class="searchControls" type="date">
+        </div>
+        <button class="searchControls" id="next-step">Next Step</button>
+    </div>
+ 
+    <div id="coords-page" class="container hide-show">
+        <h4>Give Us Details</h4>
+        <div class="generalPositions">Latitude
+            <input id="latitude" class="searchControls">
+
+        </div>
+        <div class="generalPositions">Longitude
+            <input id="longitude" class="searchControls">
+        </div>
+        <button class="searchControls" id="coordsResultBtn">Result</button>
+    </div>
+
+    <div id="cityIdZip" class="container hide-show">
+        <h4>Give Us Details</h4>
+        <div class="generalPositions">ZIP/city/id
+            <input class="searchControls" id="searchInput">
+        </div>
+        <button class="searchControls" id="city-idResultsBtn">Result</button>
+    </div>
+    <h2 class="hide-show">Here are you results took by:</h2>
+    <div id="displayResults" class="container hide-show">
+        <h4 id="displayDate"></h4>
+        <div id="responseStatus" class="responseMessage"></div>
+        
+            <div class="generalPositions">
+                <p>City name Id Coord & CEO</p>
+                <p>Wind Speed</p>
+                <p>Current Condition</p><br><br>
+                <p>Temperature</p>
+                <p>Humidity</p>
+            </div>
+            <div class="generalPositions">
+                <p id="cityNameHeader">-</p>
+                <p id="windSpeed">-</p>
+                <p id="currentConditionDescription">-</p>
+                <img id="currentConditionIcon">
+                <p id="temperature">-</p>
+                <p id="humidity">-</p>
+            </div>
+       
+        
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
